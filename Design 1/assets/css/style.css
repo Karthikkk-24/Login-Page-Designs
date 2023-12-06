@@ -10,30 +10,32 @@ body {
     overflow: hidden;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 !important;
+}
+
 .main_container {
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../img/background.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(to right, #FF512F, #F09819);
 }
 
 .login_container {
     height: 80%;
-    width: 80%;
+    width: 70%;
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-content: center;
     gap: 0;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
+    border-radius: 5vh;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
@@ -45,10 +47,53 @@ body {
     justify-content: center;
 }
 
+.login_container .image_container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/1.jpg');
+    /* border-radius: 0 5vh 5vh 0; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 .login_container .login_box {
     height: 100%;
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 0.5vh;
+    color: white;
+}
+
+.login_container .login_box input {
+    width: 80%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 1.2vh;
+    padding-left: 1vw;
+    font-size: 1.8vh;
+    border: 0.2vh solid lightgray;
+}
+
+.login_container .login_box .password_div {
+    width: 80%;
+}
+
+.login_container .login_box .password_div input {
+    width: 100%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 1.2vh;
+    padding-left: 1vw;
+    font-size: 1.8vh;
+    border: 0.2vh solid lightgray;
 }
