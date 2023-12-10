@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/73bbbac6b7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,22 +16,37 @@
             <div class="login_box">
                 <h1 class="heading">Hello Again!</h1>
                 <h4 class="sub_heading">Welcome back...</h4>
-                <br>
                 <input type="text" name="username" id="username" placeholder="Enter username">
                 <div class="password_div">
                     <input type="password" name="password" placeholder="Enter password" id="password">
                     <div class="password_icon">
+                        <i class="fa-regular fa-eye"></i>
                     </div>
                 </div>
+                <button class="submit_btn" name="submit" id="submit" type="submit">Sign In</button>
                 <div class="text">Forgot password?</div>
-                <br>
-                <button name="submit" id="submit" type="submit">Sign In</button>
-                <br>
-                <div class="text">Don't have an account?</div>
-                <div class="text2">Sign Up Now</div>
+                <div class="text">Don't have an account? <span>Sign Up Now</span>
+                </div>
+                <div class="text2"></div>
             </div>
         </div>
     </div>
+    <script>
+        const passwordIcon = document.querySelector('.password_icon');
+        let counter  = 0;
+        passwordIcon.lastElementChild.addEventListener('click', () => {
+            if (counter % 2 == 0) {
+                document.getElementById('password').setAttribute('type', 'text');
+                passwordIcon.firstElementChild.classList.add('fa-eye-slash');
+                passwordIcon.firstElementChild.classList.remove('fa-eye');
+            } else {
+                document.getElementById('password').setAttribute('type', 'password');
+                passwordIcon.firstElementChild.classList.add('fa-eye');
+                passwordIcon.firstElementChild.classList.remove('fa-eye-slash');
+            }
+            counter++;
+        });
+    </script>
 </body>
 
 </html>
